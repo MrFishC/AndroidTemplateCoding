@@ -1,0 +1,38 @@
+ext{
+
+    android = [
+            compileSdkVersion       : 28,
+            applicationId       : 'jack.mvvmanddatabinding',
+            minSdkVersion           : 16,
+            targetSdkVersion        : 28,
+            versionCode             : 1,
+            versionName             : "1.0"
+    ]
+
+    version = [
+            androidSupportSdkVersion: "28.0.0",
+
+    ]
+
+    dependencies = [
+            //support
+            "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
+
+            //view
+            "constraint"               : "com.android.support.constraint:constraint-layout:1.1.3",
+
+            "arouter-compiler"         : "com.alibaba:arouter-compiler:1.2.2",
+
+            "arouter-api"              : "com.alibaba:arouter-api:1.4.1",
+
+            "MVVMHabit"              : "com.github.goldze:MVVMHabit:3.1.1",
+
+            //tools
+
+            //test
+//            "junit"                    : "junit:junit:4.12",
+//            "androidJUnitRunner"       : "android.support.test.runner.AndroidJUnitRunner",
+//            "runner"                   : "com.android.support.test:runner:1.0.1",
+//            "espresso"                 : "com.android.support.test.espresso:espresso-core:3.0.1",
+    ]
+}

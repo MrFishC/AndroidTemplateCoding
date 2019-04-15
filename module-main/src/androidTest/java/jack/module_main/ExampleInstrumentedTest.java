@@ -1,4 +1,4 @@
-package jack.module_first;
+package jack.module_main;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("jack.module_first.test", appContext.getPackageName());
+        assertEquals("jack.module_main.test", appContext.getPackageName());
     }
 }

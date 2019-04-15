@@ -36,7 +36,7 @@ android {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 resources {
                     //正式版本时，排除debug文件夹下所有调试文件
-                    exclude 'src/main/debug/*'
+                    exclude 'src/main/alone/*'
                 }
             }
         }
@@ -45,25 +45,12 @@ android {
     buildTypes {
 
         debug {
-            buildConfigField "boolean", "LOG_DEBUG", "true"
-            buildConfigField "boolean", "USE_CANARY", "false"
-            buildConfigField "boolean", "IS_BUILD_MODULE", "${isBuildModule}"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         release {
-            buildConfigField "boolean", "LOG_DEBUG", "false"
-            buildConfigField "boolean", "USE_CANARY", "false"
-            buildConfigField "boolean", "IS_BUILD_MODULE", "${isBuildModule}"
             minifyEnabled true
-
-//            if (isBuildModule.toBoolean()) {
-//                shrinkResources true
-//            }
-
-//            zipAlignEnabled true
-
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 

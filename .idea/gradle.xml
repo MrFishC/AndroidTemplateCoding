@@ -11,7 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/library-base" />
             <option value="$PROJECT_DIR$/library-res" />
-            <option value="$PROJECT_DIR$/module-first" />
+            <option value="$PROJECT_DIR$/module-main" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

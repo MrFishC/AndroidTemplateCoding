@@ -1,12 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-
-    //开启DataBinding
-    dataBinding {
-        enabled true
-    }
-
+    
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
 
     defaultConfig {
@@ -25,6 +20,19 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isBuildModule.toBoolean()) {
+            } else {
+                resources {
+                    //正式版本时，排除debug文件夹下所有调试文件
+                    exclude 'src/debug/*'
+                }
+            }
+        }
+    }
+
 }
 
 dependencies {
@@ -32,7 +40,4 @@ dependencies {
 
     implementation rootProject.ext.dependencies["appcompat-v7"]
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }

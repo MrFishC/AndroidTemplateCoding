@@ -2,11 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
 
-    //开启DataBinding
-    dataBinding {
-        enabled true
-    }
-
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
 
     defaultConfig {
@@ -14,8 +9,6 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
 
@@ -26,20 +19,31 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isBuildModule.toBoolean()) {
+            } else {
+                resources {
+                    //正式版本时，排除debug文件夹下所有调试文件
+                    exclude 'src/debug/*'
+                }
+            }
+        }
+    }
+
 }
 
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api rootProject.ext.dependencies["constraint"]
 
     //support相关库
     api rootProject.ext.dependencies["appcompat-v7"]
 
-    //library-res
+    //公用资源在base中依赖 library-res
     api project(':library-res')
 
     //MVVMHabit框架

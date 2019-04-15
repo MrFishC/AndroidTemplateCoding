@@ -1,4 +1,4 @@
-package jack.module_first;
+package jack.module_main;
 
 import org.junit.Test;
 

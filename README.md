@@ -13,29 +13,23 @@ Mvvm+Databinding学习记录
 + 所有组件寄托于宿主App，加载分离的各个组件，各自编译自己的模块，有利于多人团队协作开发;
 
 ### 2.准备工作
-+ 了解MVVMHabit:
-+  基于谷歌最新AAC架构，MVVM设计模式的一套快速开发库，整合Okhttp+RxJava+Retrofit+Glide等主流模块，满足日常开发需求。使用该框架可以快速开发一个高质量、易维护的Android应用;
-+ 了解ARouter:
-+  阿里出的一个用于帮助 Android App 进行组件化改造的框架 —— 支持模块间的路由、通信、解耦;
++ 了解MVVMHabit:基于谷歌最新AAC架构，MVVM设计模式的一套快速开发库，整合Okhttp+RxJava+Retrofit+Glide等主流模块，满足日常开发需求。使用该框架可以快速开发一个高质量、易维护的Android应用;
++ 了解ARouter:阿里出的一个用于帮助 Android App 进行组件化改造的框架 —— 支持模块间的路由、通信、解耦;
 
 ### 3.开始搭建项目
 
 #### 3.1.创建宿主
 + 特点:宿主项目没有layout和activity;
 + 职责:负责配置构建编译/打包参数，依赖子模块;
-+ 包含两个部分:
-+  AndroidManifest.xml,用来配置application、启动页面等;
-+  build.gradle,负责配置构建编译/打包参数，依赖子模块;
++ 包含两个部分:1,AndroidManifest.xml,用来配置application、启动页面等;2,build.gradle,负责配置构建编译/打包参数，依赖子模块;
 
 #### 3.2.创建组件
 > 特点:组件是一个特殊的Module,在合并打包的时候它是一个library：apply plugin: ‘com.android.library’，在独立编译运行的时候，它是一个application：apply plugin: ‘com.android.application’;
 
 #### 3.3.创建Library
 > 除了业务组件之外，还需要创建两个基础Library,library-base和library-res;
-+ library-base(核心库)：
-        + 存放一些公共方法、公共常量、组件通信的契约类等.上层被所有组件依赖,下层依赖公共资源库/图片选择库/路由库等通用库,通过它,避免了组件直接依赖各种通用库,承上启下,作为整个组件化的核心库;
-+ library-res：
-        + 为了缓解base库的压力,专门分离出一个公共资源库,被base库所依赖,主要存放与res相关的公共数据,比如图片/style/anim/color等;
++ library-base(核心库)：存放一些公共方法、公共常量、组件通信的契约类等.上层被所有组件依赖,下层依赖公共资源库/图片选择库/路由库等通用库,通过它,避免了组件直接依赖各种通用库,承上启下,作为整个组件化的核心库;
++ library-res：为了缓解base库的压力,专门分离出一个公共资源库,被base库所依赖,主要存放与res相关的公共数据,比如图片/style/anim/color等;
 
 #### 3.4.第三方框架准备
 + 3.4.1.MVVMHabit配置:
@@ -96,10 +90,13 @@ dependencies {                          //todo 待检测
 #### 4.1.依赖关系
 
 + 宿主依赖业务组件
+        
         todo 配代码
 + 业务组件依赖library-base
+        
         todo 配代码
 + library-base依赖公共库
+        
         todo 配代码
 
 #### 4.2.开启dataBinding

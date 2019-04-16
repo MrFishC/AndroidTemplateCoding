@@ -1,19 +1,17 @@
 # MvvmAndDatabinding
-Mvvm+Databinding学习
-# Mvvm 和 组件化
+Mvvm+Databinding学习记录
 
-> https://github.com/goldze/MVVMHabitComponent
-> https://blog.csdn.net/guiying712/article/details/55213884#2%E5%A6%82%E4%BD%95%E7%BB%84%E4%BB%B6%E5%8C%96
+[参考一](https://github.com/goldze/MVVMHabitComponent)
+[参考二](https://blog.csdn.net/guiying712/article/details/55213884#2%E5%A6%82%E4%BD%95%E7%BB%84%E4%BB%B6%E5%8C%96)
 
-> 每一次挑战都能让自己成长,战!
+## 一.简介
++ 对于架构,最常用的可能是Mvc,比较流行的是Mvp,它在某种程度上与Mvvm模式非常相似。不过Mvvm在Mvp的基础上更进一步的提高了开发效率，拥有了数据绑定的能力;
 
-> 对于架构,最常用的可能是Mvc,比较流行的是Mvp,它在某种程度上与Mvvm模式非常相似。不过Mvvm在Mvp的基础上更进一步的提高了开发效率，拥有了数据绑定的能力。
+### 1.组件化方案架构特点:
++ 高内聚，低耦合，代码边界清晰，每一个组件都可以拆分出来独立运行;
++ 所有组件寄托于宿主App，加载分离的各个组件，各自编译自己的模块，有利于多人团队协作开发;
 
-    ### 1.组件化方案架构特点:
-        高内聚，低耦合，代码边界清晰，每一个组件都可以拆分出来独立运行;
-        所有组件寄托于宿主App，加载分离的各个组件，各自编译自己的模块，有利于多人团队协作开发;
-
-    ### 2.准备工作
+### 2.准备工作
         + 了解MVVMHabit:
             + 基于谷歌最新AAC架构，MVVM设计模式的一套快速开发库，整合Okhttp+RxJava+Retrofit+Glide等主流模块，满足日常开发需求。使用该框架可以快速开发一个高质量、易维护的Android应用;
         + 了解ARouter:

@@ -3,7 +3,7 @@ Mvvm+Databinding学习记录
 
 + [快速搭建组件化架构](https://github.com/goldze/MVVMHabitComponent)
 
-+ [Android组件化方案(https://blog.csdn.net/guiying712/article/details/55213884#2%E5%A6%82%E4%BD%95%E7%BB%84%E4%BB%B6%E5%8C%96)
++ [Android组件化方案](https://blog.csdn.net/guiying712/article/details/55213884#2%E5%A6%82%E4%BD%95%E7%BB%84%E4%BB%B6%E5%8C%96)
 
 ## 一.简介
 + 对于架构,最常用的可能是Mvc,比较流行的是Mvp,它在某种程度上与Mvvm模式非常相似。不过Mvvm在Mvp的基础上更进一步的提高了开发效率，拥有了数据绑定的能力;
@@ -40,7 +40,7 @@ Mvvm+Databinding学习记录
 #### 3.4.第三方框架准备
 + 3.4.1.MVVMHabit配置:
 
-+ //配置一:工程的gradle配置
++ 配置一:工程的gradle配置
 ```
 allprojects {
         repositories {
@@ -52,7 +52,7 @@ allprojects {
 }
 ```
 
-+ //配置二宿主项目中的gradle中配置
++ 配置二宿主项目中的gradle中配置
 ```
 dependencies {
         //...

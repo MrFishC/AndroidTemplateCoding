@@ -1,2 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="jack.module_main" />
+    package="jack.module_main" >
+
+    <application>
+
+        <!--在自己组件中注册Activity-->
+        <activity android:name=".ui.MainActivity">
+            <!-- todo 设置任务栈模式 -->
+        </activity>
+
+    </application>
+</manifest>

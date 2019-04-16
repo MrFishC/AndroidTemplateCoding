@@ -11,7 +11,12 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/library-base" />
             <option value="$PROJECT_DIR$/library-res" />
+            <option value="$PROJECT_DIR$/module-four" />
+            <option value="$PROJECT_DIR$/module-login" />
             <option value="$PROJECT_DIR$/module-main" />
+            <option value="$PROJECT_DIR$/module-one" />
+            <option value="$PROJECT_DIR$/module-second" />
+            <option value="$PROJECT_DIR$/module-third" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -5,6 +5,10 @@ Mvvm+Databinding学习记录
 
 + [Android组件化方案](https://blog.csdn.net/guiying712/article/details/55213884#2%E5%A6%82%E4%BD%95%E7%BB%84%E4%BB%B6%E5%8C%96)
 
++ [DataBinding系列（一）：DataBinding初认识](https://www.jianshu.com/p/53925ccb900e)
+
++ [ARouter](https://github.com/alibaba/ARouter)
+
 ## 一.简介
 + 对于架构,最常用的可能是Mvc,比较流行的是Mvp,它在某种程度上与Mvvm模式非常相似。不过Mvvm在Mvp的基础上更进一步的提高了开发效率，拥有了数据绑定的能力;
 
@@ -143,5 +147,20 @@ TODO 如何配置?
 ### 5.组件初始化
 > 组件在独立运行时，也就是debug期，有单独的manifest，当然也就可以指定Application类进行初始化。
 那么当组件进行合并的时，Application只能有一个，并且存在宿主App中，组件该如何进行初始化？
-### 5.1.反射
+#### 5.1.反射
 + 反射是一种解决组件初始化的方法。
+> 每一个业务组件的src/main/包名目录下新建一个目录,命名为independent(自己定义).组件在独立运行时,在alone(自己定义)目录下有单独的manifest,
+独立运行的情况下,模块的入口activity放在independent中.同时当然也就可以指定Application类进行初始化(建议在library-base中配置).
+那么当组件进行合并的时,Application只能有一个,并且存在宿主App中,组件该如何进行初始化？
+
+todo
+
+#### 5.2.组件间通信
+> 组件间是完全无耦合的存在，但是在实际开发中肯定会存在业务交叉的情况，该如何实现无联系的组件间通信呢？
+##### 5.2.1.ARouter
++ ARouter 之所以作为整个组件化的核心,是因为它拥有强大的路由机制.ARouter在library-base中依赖,所有组件又依赖于library-base,所以它可以看作为组件间通信的桥梁.
+
++ ARouter配置已经介绍过,
+
++ databinding 简单使用
+

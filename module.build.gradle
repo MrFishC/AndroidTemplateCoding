@@ -26,6 +26,9 @@ android {
 
     }
 
+    /*java插件引入了一个概念叫做SourceSets，通过修改SourceSets中的属性，可以指定哪些源文件
+    （或文件夹下的源文件）要被编译，哪些源文件要被排除。这样在不同的开发模式下就会读取到不同的 AndroidManifest.xml
+     ，然后我们需要修改这两个表单的内容以为我们不同的开发模式服务。*/
     sourceSets {
         main {
             if (isBuildModule.toBoolean()) {
@@ -35,7 +38,7 @@ android {
                 //合并到宿主
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 resources {
-                    //正式版本时，排除debug文件夹下所有调试文件
+                    //正式版本时，排除alone文件夹下所有调试文件
                     exclude 'src/main/alone/*'
                 }
             }

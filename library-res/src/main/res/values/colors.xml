@@ -10,4 +10,9 @@
     <color name="mainColor">#3CC3D3</color>
     <color name="gray">#B2B2B2</color>
 
+    <!-- todo temp -->
+    <color name="appBackColor">#F4F3F3</color>
+    <color name="viewLineColor">#E0E0E0</color>
+    <color name="textColor">#333333</color>
+
 </resources>

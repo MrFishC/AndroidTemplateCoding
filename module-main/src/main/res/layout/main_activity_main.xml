@@ -4,7 +4,9 @@
     <!--
     这里和以前使用的xml不同，根节点变成了layout，里面包括了data节点和传统的布局。
     这里的data节点作用是连接 View 和 Modle 的桥梁。在这个data节点中声明一个variable变量，
-    那值就可以轻松传到布局文件中来了。而且TextView中没有给控件定义id，而是在text的时候用了@{ }的方法，在括号里面直接引用UserBean对象的属性即可完成赋值。
+    那值就可以轻松传到布局文件中来了。
+
+    在布局中获取控件方式,如android:id="@+id/main_bottom_tab"的获取方式为,通过databinding.mainBottomTab.
     -->
 
     <data>
@@ -25,11 +27,17 @@
             style="@style/main_bottom_height_weight" />
 
         <!-- 导航栏高度设置48dp，验证布局是否合适 -->
-        <include
-            android:id="@+id/navigation_bar_height"
-            layout="@layout/layout_tab_bottom"
+        <!--<include-->
+            <!--android:id="@+id/navigation_bar_height"-->
+            <!--layout="@layout/layout_tab_bottom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp" />-->
+
+        <me.majiajie.pagerbottomtabstrip.PageNavigationView
+            android:id="@+id/main_bottom_tab"
             android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_height="56dp"
+            android:background="#FFF" />
 
     </LinearLayout>
 </layout>

@@ -67,7 +67,7 @@ dependencies {
         //主业务模块
         implementation project(':module-login')
         implementation project(':module-main')
-        implementation project(':module-one')
+        implementation project(':module-first')
         implementation project(':module-second')
         implementation project(':module-third')
         implementation project(':module-four')

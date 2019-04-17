@@ -19,4 +19,7 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     //单组件依赖的第三方库，这里不能用implementation，否则宿主项目会因为databinding运行时不能找到第三方类报编译错误
 
+    //地址:https://github.com/tyzlmjj/PagerBottomTabStrip?utm_source=tuicool&utm_medium=referral
+    //第三方底部Tabbar(这里要用api依赖, 不能用implementation，不然当宿主打包的时候自动生成的databinding无法编译该库的类
+    api 'me.majiajie:pager-bottom-tab-strip:2.3.0'
 }

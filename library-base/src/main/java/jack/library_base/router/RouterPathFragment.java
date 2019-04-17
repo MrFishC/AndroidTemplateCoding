@@ -9,12 +9,12 @@ package jack.library_base.router;
 public class RouterPathFragment {
 
     /**
-     * module-one
+     * module-first
      */
-    public static class One {
-        private static final String ONE = "/one";
-        /*首页-one*/
-        public static final String PAGER_ONE = ONE + "/One";
+    public static class First {
+        private static final String FIRST = "/first";
+        /*首页-first*/
+        public static final String PAGER_FIRST = FIRST + "/First";
     }
 
     /**

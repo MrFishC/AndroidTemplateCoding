@@ -1,4 +1,4 @@
-package jack.module_one;
+package jack.module_frist;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

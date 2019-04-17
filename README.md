@@ -9,6 +9,8 @@ Mvvm+Databinding学习记录
 
 + [ARouter](https://github.com/alibaba/ARouter)
 
++ [Android 基础[花式实现底部导航栏之BottomNavigationView(1)] ](https://mp.weixin.qq.com/s/k6GUzoE5b-MiekmrO9_VTg?)
+
 ## 一.简介
 + 对于架构,最常用的可能是Mvc,比较流行的是Mvp,它在某种程度上与Mvvm模式非常相似。不过Mvvm在Mvp的基础上更进一步的提高了开发效率，拥有了数据绑定的能力;
 
@@ -163,4 +165,9 @@ todo
 + ARouter配置已经介绍过,
 
 + databinding 简单使用
+
+
+-------------------------------------------
+在使用BottomNavigationView时，元素图标尽量选取svg
+
 

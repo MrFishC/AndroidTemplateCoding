@@ -18,14 +18,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
         android:orientation="vertical">
 
         <FrameLayout
-            android:id="@+id/frameLayout"
+            android:id="@+id/main_fragment_contain"
+            style="@style/main_bottom_height_weight" />
+
+        <!-- 导航栏高度设置48dp，验证布局是否合适 -->
+        <include
+            android:id="@+id/navigation_bar_height"
+            layout="@layout/layout_tab_bottom"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="48dp" />
 
     </LinearLayout>
 </layout>

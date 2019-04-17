@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/ll_home"
+        style="@style/main_bottom_width_weight">
+
+        <ImageView
+            android:id="@+id/iv_time_table"
+            style="@style/wrap_h_w_centerh"
+            android:src="@drawable/iv_timetables_selector"/>
+
+        <TextView
+            style="@style/main_bottom_textview"
+            android:layout_below="@+id/iv_time_table"
+            android:text="@string/text_timetable"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_category"
+        style="@style/main_bottom_width_weight">
+
+        <ImageView
+            android:id="@+id/iv_register"
+            style="@style/wrap_h_w_centerh"
+            android:src="@drawable/iv_register_selector"/>
+
+        <TextView
+            style="@style/main_bottom_textview"
+            android:layout_below="@+id/iv_register"
+            android:text="@string/text_register"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_service"
+        style="@style/main_bottom_width_weight">
+
+        <ImageView
+            android:id="@+id/iv_contact"
+            style="@style/wrap_h_w_centerh"
+            android:src="@drawable/iv_contact_selector"/>
+
+        <TextView
+            style="@style/main_bottom_textview"
+            android:layout_below="@+id/iv_contact"
+            android:text="@string/text_contact"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_mine"
+        style="@style/main_bottom_width_weight">
+
+        <ImageView
+            android:id="@+id/iv_work"
+            style="@style/wrap_h_w_centerh"
+            android:src="@drawable/iv_work_selector"/>
+
+        <TextView
+            style="@style/main_bottom_textview"
+            android:layout_below="@+id/iv_work"
+            android:text="@string/text_work"/>
+
+    </RelativeLayout>
+</LinearLayout>

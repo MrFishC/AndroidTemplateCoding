@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">library-res</string>
+
+    <string name="text_timetable">课程表</string>
+    <string name="text_register">德育</string>
+    <string name="text_contact">联系</string>
+    <string name="text_work">工作</string>
+
 </resources>

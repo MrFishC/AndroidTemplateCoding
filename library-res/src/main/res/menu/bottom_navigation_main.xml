@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_timetable"
+        android:enabled="true"
+        android:icon="@drawable/iv_timetables_selector"
+        android:title="@string/text_timetable"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_register"
+        android:enabled="true"
+        android:icon="@drawable/iv_register_selector"
+        android:title="@string/text_register"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_contact"
+        android:enabled="true"
+        android:icon="@drawable/iv_contact_selector"
+        android:title="@string/text_contact"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_work"
+        android:enabled="true"
+        android:icon="@drawable/iv_work_selector"
+        android:title="@string/text_work"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,1 +1,10 @@
-include ':app', ':library-base', ':library-res', ':module-main', ':module-login', ':module-second', ':module-third', ':module-four', ':module-first'
+include ':app',
+        ':library_base',
+        ':library_res',
+        ':module_main',
+        ':module_login'
+
+include ':library_wrapper_mvvm'
+include ':library_wrapper_net'
+include ':library_wrapper_image'
+include ':library_wrapper_util'

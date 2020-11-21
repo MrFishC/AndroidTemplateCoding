@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+
+apply from: "../base.build.gradle"
+
+dependencies {
+
+    /**==============================所有业务模块需要使用的依赖，start==============================*/
+
+    //公用资源在base中依赖 library-res
+    api project(':library_res')
+
+    api rootProject.ext.dependencies["constraint"]          //约束布局
+    api rootProject.ext.dependencies["appcompat"]        //support相关库
+
+    api rootProject.ext.dependencies["arouter-api"]         //ARouter框架
+
+    /**==============================所有业务模块需要使用的依赖，end==============================*/
+}

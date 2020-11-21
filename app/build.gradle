@@ -18,7 +18,7 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         //ARouter配置
         javaCompileOptions {
@@ -58,21 +58,21 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+
     //宿主项目中判断组件是否需要独立运行
     if (isBuildModule.toBoolean()) {
         //组件独立运行时，宿主项目直接依赖基础库，避免编译错误
-        implementation project(':library-base')
+        implementation project(':library_base')
     } else {
         //主业务模块
-        implementation project(':module-login')
-        implementation project(':module-main')
-        implementation project(':module-first')
-        implementation project(':module-second')
-        implementation project(':module-third')
-        implementation project(':module-four')
+        implementation project(':module_login')
+        implementation project(':module_main')
+//        implementation project(':module_first')
+//        implementation project(':module_second')
+//        implementation project(':module_third')
+//        implementation project(':module_four')
     }
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
 }

@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+
+apply from: "../base.build.gradle"
+
+dependencies {
+    api rootProject.ext.dependencies["appcompat"]
+
+    api rootProject.ext.dependencies["viewModel"]
+    api rootProject.ext.dependencies["liveData"]
+    api rootProject.ext.dependencies["lifecycles"]
+    api rootProject.ext.dependencies["stateViewModel"]
+    api rootProject.ext.dependencies["lifecycleCommon"]
+    annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
+}

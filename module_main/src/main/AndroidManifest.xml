@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jack.module_main" >
+
+    <application>
+        <!--在自己组件中注册Activity-->
+        <activity android:name=".ui.MainActivity"/>
+    </application>
+</manifest>
